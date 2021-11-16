@@ -1,0 +1,374 @@
+*{
+    text-decoration:none; 
+    list-style:none; 
+    margin:0px; 
+    padding:0px; 
+    outline:none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ hr{
+     border: 5px solid #D69F0F;
+ }
+
+.header{
+    min-width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav{
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.links a{
+    color: #fff;
+    padding: 0 .5em;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.links a:hover{
+    color: #D69F0F;
+}
+
+
+.hamburger{
+    height: 100%;
+    width: 70px;
+    text-align: center;
+    display: none;
+}
+
+.hamburger i{
+    display: block;
+    padding: 23px;
+    font-size: 1.6em;
+    color: #fff;
+}
+
+/*Menu Responsive*/
+@media screen and (max-width:900px){
+    .hamburger{
+        display: block;
+    }
+    .links{
+        position: fixed;
+        background: rgba(0,0,0,0.7);
+        left: 0;
+        top: 81px;
+        width: 100%;
+        height:60vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-100%);
+    }
+
+    .links2{
+        transform: translateX(0%);
+    }
+}
+
+/*slider automatico*/
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1000;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: autoplay 20s infinite;
+    animation-direction: alternate;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+}
+.slider__li1{
+    min-width: 1000px;
+    min-height: 700px;
+    background-image: linear-gradient(120deg, rgba(3, 3, 3, 0.5) 0%, rgba(8, 8, 8, 0.5) 100%), url(../img/alumnos1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.slider__li2{
+    min-width: 1000px;
+    min-height: 700px;
+    background-image: linear-gradient(120deg, rgba(3, 3, 3, 0.5) 0%, rgba(8, 8, 8, 0.5) 100%), url(../img/edificio_crece.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.slider__li3{
+    min-width: 1000px;
+    min-height: 700px;
+    background-image: linear-gradient(120deg, rgba(3, 3, 3, 0.5) 0%, rgba(8, 8, 8, 0.5) 100%), url(../img/escritorios.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.slider__li4{
+    min-width: 1000px;
+    min-height: 700px;
+    background-image: linear-gradient(120deg, rgba(3, 3, 3, 0.5) 0%, rgba(8, 8, 8, 0.5) 100%), url(../img/alumnos2.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+@media screen and (max-width:900px){
+    .slider__li1{
+        min-width: 200px;
+    }
+
+    .slider__li2{
+        min-width: 200px;
+    }
+
+    .slider__li3{
+        min-width: 200px;
+    }
+
+    .slider__li4{
+        min-width: 200px;
+    }
+    
+}
+
+@keyframes autoplay {
+    0%{
+        margin-left: 0;
+    }
+    20%{
+        margin-left: 0;
+    }
+
+    25%{
+        margin-left: -100%;
+    }
+    45%{
+        margin-left: -100%;
+    }
+
+    50%{
+        margin-left: -200%;
+    }
+    70%{
+        margin-left: -200%;
+    }
+
+    75%{
+        margin-left: -300%;
+    }
+    100%{
+        margin-left: -300%;
+    }
+}
+
+.slider__container{
+    width: 50%;
+    height: 85%;
+    /* background-color: rgb(189, 148, 38); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5em;
+    gap: 2em;
+    position:absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2000;
+}
+
+@media screen and (max-width:900px){
+    .slider__container{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 2em;
+        gap: 2em;
+    }
+    
+}
+
+@media screen and (max-width:425px){
+    .slider__container{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        padding: 0 1em;
+        gap: 2em;
+    }
+    
+}
+
+.slider__h1{
+    font-size: 3.3em;
+    color: white;
+}
+.slider__p{
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.74);
+    font-weight: 700;
+}
+
+.slder__container--links{
+    display: flex;
+    gap: 20px;
+}
+.links__sl{
+    max-width: 120px;
+    padding: .6em 3em;
+    background-color: #D69F0F;
+    border-radius: .3em;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    transition: background-color .5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links__sl .slider__link, .slider__arrow{
+    color: #fff;
+    font-size: 15px;
+}
+
+.links__sl .slider__arrow{
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.links__sl:hover{
+    background-color: slateblue;
+    transition: all .3s;
+}
+
+
+/*Container Info*/
+
+.container__info{
+    width: 80%;
+    height: 95vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 10%;
+
+}
+
+.slider__info{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+}
+
+.icon__info{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.slider__info--h3{
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width:900px){
+    .container__info{
+       display: none;
+    }
+    
+}
+
+
+/*================== Principal =========================*/
+
+.section1{
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #080713;
+    /* background-color: violet; */
+}
+
+.about{
+    width: 90%;
+    margin: auto;
+    padding-top: 2em;   
+}
+.about__text{
+    display: flex;
+    
+}
+.about__h1{
+    display: inline;
+    font-size: 3.5em;
+    border-bottom: 2px solid #D69F0F;
+    color: white;
+}
+.about__h4{
+    color: #D69F0F;
+}
+.about__p1{
+    color: white;
+    text-align: justify;
+    margin-left: 45px;
+    padding: 0 2em;
+    line-height: 25px;
+}
+.about__p2{
+    color: white;
+    text-align: justify;
+    padding: 0 2em;
+    line-height: 25px;
+}
+
+@media screen and (max-width:900px){
+    .about__text{
+        flex-direction: column;
+    }
+
+    .about, .about__p1, .about__p2{
+        margin-left: 0;
+        padding: 0;
+    }
+    
+}
